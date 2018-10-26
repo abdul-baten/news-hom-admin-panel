@@ -1,0 +1,154 @@
+.el-breadcrumb__inner,
+.el-breadcrumb__inner a {
+  font-weight: 400 !important;
+}
+
+.el-upload {
+  input[type="file"] {
+    display: none !important;
+  }
+}
+
+.el-upload__input {
+  display: none;
+}
+
+.cell {
+  .el-tag {
+    margin-right: 0px;
+    width: 100px !important;
+    text-align: center !important;
+  }
+}
+
+.small-padding {
+  .cell {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.fixed-width {
+  .el-button--mini {
+    padding: 7px 10px;
+    width: 60px;
+  }
+}
+
+.status-col {
+  .cell {
+    padding: 0 10px;
+    text-align: center;
+
+    .el-tag {
+      margin-right: 0px;
+    }
+  }
+}
+
+//暂时性解决dialog 问题 https://github.com/ElemeFE/element/issues/2461
+.el-dialog {
+  transform: none;
+  left: 0;
+  position: relative;
+  margin: 0 auto;
+}
+
+//文章页textarea修改样式
+.article-textarea {
+  textarea {
+    padding-right: 40px;
+    resize: none;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid #bfcbd9;
+  }
+}
+
+//element ui upload
+.upload-container {
+  .el-upload {
+    width: 100%;
+
+    .el-upload-dragger {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+//dropdown
+.el-dropdown-menu {
+  a {
+    display: block;
+  }
+}
+
+.el-dropdown-menu {
+  min-width: 120px;
+}
+// element ui notification
+.el-notification__content {
+  font-size: 13px;
+  text-align: left;
+}
+
+// element ui alert
+.el-alert__closebtn {
+  top: 40%;
+}
+
+.el-card__body {
+  padding: 0;
+}
+
+.el-popover {
+  font-size: 13px !important;
+  text-align: left !important;
+}
+
+.el-popover__title {
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.el-select-dropdown__item.hover,
+.el-select-dropdown__item:hover {
+  background-color: rgba(230, 247, 255, 0.8);
+}
+
+.el-dialog__footer {
+  padding: 20px 20px;
+  text-align: right;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-top: 1px solid #e6e6e6;
+}
+
+@media screen and (max-width: 768px) {
+  .el-dialog {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1087px) {
+  .el-dialog {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1088px) {
+  .el-dialog {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .el-dialog {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1472px) {
+  .el-dialog {
+    width: 40%;
+  }
+}

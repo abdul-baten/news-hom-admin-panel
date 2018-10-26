@@ -1,0 +1,420 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+@import "./variables.scss";
+@import "./mixin.scss";
+@import "./transition.scss";
+@import "./element-ui.scss";
+@import "./sidebar.scss";
+@import "./btn.scss";
+@import "./space.scss";
+@import "./player.scss";
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 11px !important;
+  overflow: auto;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.padding-content {
+  padding: 4px 0;
+}
+
+a {
+  color: #333 !important;
+}
+
+a:hover {
+  color: #c3222a !important;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.pr-5 {
+  padding-right: 5px;
+}
+
+.pl-5 {
+  padding-left: 5px;
+}
+
+.ma-1 {
+  margin: 10px;
+}
+
+.mt-1 {
+  margin-top: 10px;
+}
+
+.mt-2 {
+  margin-top: 20px;
+}
+
+.mt-3 {
+  margin-top: 30px;
+}
+
+.mt-4 {
+  margin-top: 40px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.block {
+  display: block;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.inlineBlock {
+  display: block;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+code {
+  background: #eef1f6;
+  padding: 15px 16px;
+  margin-bottom: 20px;
+  display: block;
+  line-height: 36px;
+  font-size: 15px;
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+
+  a {
+    color: #337ab7;
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(32, 160, 255);
+    }
+  }
+}
+
+.warn-content {
+  background: rgba(66, 185, 131, 0.1);
+  border-radius: 2px;
+  padding: 16px;
+  padding: 1rem;
+  line-height: 1.6rem;
+  word-spacing: 0.05rem;
+
+  a {
+    color: #42b983;
+    font-weight: 600;
+  }
+}
+
+//main-container全局样式
+.app-container {
+  padding: 20px;
+}
+
+.components-container {
+  margin: 30px 50px;
+  position: relative;
+}
+
+.pagination-container {
+  margin-top: 30px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.sub-navbar {
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  width: 100%;
+  text-align: right;
+  padding-right: 20px;
+  transition: 600ms ease position;
+  background: linear-gradient(
+    90deg,
+    rgba(32, 182, 249, 1) 0%,
+    rgba(32, 182, 249, 1) 0%,
+    rgba(33, 120, 241, 1) 100%,
+    rgba(33, 120, 241, 1) 100%
+  );
+
+  .subtitle {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  &.draft {
+    background: #d0d0d0;
+  }
+
+  &.deleted {
+    background: #d0d0d0;
+  }
+}
+
+.link-type,
+.link-type:focus {
+  color: #337ab7;
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(32, 160, 255);
+  }
+}
+
+.filter-container {
+  padding-bottom: 10px;
+
+  .filter-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 10px;
+  }
+}
+
+//refine vue-multiselect plugin
+.multiselect {
+  line-height: 16px;
+}
+
+.multiselect--active {
+  z-index: 1000 !important;
+}
+
+.main-content {
+  margin: 20px 10px;
+  background-color: #fff;
+  padding: 0;
+}
+
+.el-table td,
+.el-table th {
+  font-size: 12px !important;
+}
+
+.el-button--medium {
+  font-size: 12px !important;
+}
+
+.el-dropdown-menu--medium .el-dropdown-menu__item {
+  font-size: 12px !important;
+}
+
+.el-select-dropdown__item {
+  font-size: 11px !important;
+}
+
+.menu-label {
+  margin: 20px;
+}
+
+.menu-list a {
+  padding: 10px 20px;
+  font-size: 11px !important;
+}
+
+.menu li a {
+  border-left: 3px solid #f9f9f9;
+}
+
+.menu li a.active {
+  border-left: 3px solid #c3222a;
+  background-color: #f9f9f9;
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+}
+
+.is-horizontal-center {
+  justify-content: center !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+
+.el-collapse-item__header {
+  font-size: 20px !important;
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 0;
+}
+
+.el-collapse-item__content {
+  margin: 25px 0;
+}
+
+.el-collapse-item__header.is-active {
+  color: #c3222a;
+}
+
+.pa-3 {
+  padding: 30px;
+}
+
+.is-contact-list i {
+  font-size: 20px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  border: 1px solid #c3222a;
+  float: left;
+  margin-right: 15px;
+  margin-top: 10px;
+  color: #c3222a;
+}
+
+.has-background-danger {
+  background-color: #c3222a !important;
+}
+
+.button.is-danger.is-inverted {
+  background-color: #fff;
+  border-color: #fff;
+  color: #c3222a;
+}
+
+.mt-5 {
+  margin-top: 50px;
+}
+
+.mb-4 {
+  margin-bottom: 40px;
+}
+
+.py-5 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.el-carousel__item--card {
+  width: 20%;
+  background: #ccc !important;
+  text-align: center;
+}
+
+.hdr-logo {
+  width: 154px;
+  height: 30px;
+  margin: 0;
+  background-image: url("../images/logo/logo.png");
+  background-size: auto;
+}
+
+.sidebar-content {
+  width: 70px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  border-right: 1px solid #e6e6e6;
+  z-index: 999;
+  background-color: #fff;
+}
+
+.el-menu {
+  border-right: none;
+}
+
+.area-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-left: 70px;
+  top: 0;
+}
+
+.mr-2 {
+  margin-right: 20px;
+}
+
+.ml-2 {
+  margin-left: 20px;
+}
+
+.el-upload-dragger {
+  margin: 0 auto !important;
+}
+
+.el-dialog__header {
+  text-align: left;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 20px;
+  background-color: #f9f9f9;
+}
+
+.column {
+  padding: 0 0.75rem;
+}
